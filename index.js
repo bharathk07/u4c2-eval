@@ -30,7 +30,7 @@ const usersSchema = mongoose.Schema(
 
 const Users = mongoose.model("users",usersSchema)
 
-const barnchdeatilSchema = mongoose.Schema(
+const branchdeatilSchema = mongoose.Schema(
     {
         name:{type:String , require:true},
         address:{type:String ,require:true},
@@ -44,7 +44,7 @@ const barnchdeatilSchema = mongoose.Schema(
     }
 )
 
-const BranchDetail = mongoose.model("branch",barnchdeatilSchema)
+const BranchDetail = mongoose.model("branch",branchdeatilSchema)
 
 const masterSchema = mongoose.Schema(
     {
@@ -159,9 +159,10 @@ app.delete("/fixed/:id" , async (req,res) =>{
 
 app.listen(5000, async ()=>{
     try {
-        await connect()
+        await connect();
+         console.log("Listening on port");
     } catch (error) {
         console.log(error)
     }
-    console.log("listening on 5000")
+    // console.log("listening on 5000")
 })
