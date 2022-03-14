@@ -160,9 +160,8 @@ app.delete("/fixed/:id" , async (req,res) =>{
 app.listen(5000, async ()=>{
     try {
         await connect();
-         console.log("Listening on port");
     } catch (error) {
         console.log(error)
     }
-    // console.log("listening on 5000")
+    console.log("listening on 5000")
 })
